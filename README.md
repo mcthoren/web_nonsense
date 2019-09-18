@@ -9,3 +9,5 @@ leafmap.html:
 * the layer sources and leaflet lib are all IPv6 capable.
 
 * i created this cuz i get tired of clicking thru Google's 27 different steps to opt out of their data collection, and openstreetmap tiles don't load too well thru ssh -D tunnels for me.
+
+* TODO: i still haven't figure out how to make it automatically fill the full window yet.
