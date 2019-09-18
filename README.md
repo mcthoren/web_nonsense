@@ -11,3 +11,9 @@ leafmap.html:
 * i created this cuz i get tired of clicking thru Google's 27 different steps to opt out of their data collection, and openstreetmap tiles don't load too well thru ssh -D tunnels for me.
 
 * TODO: i still haven't figure out how to make it automatically fill the full window yet.
+
+rad_loop.html
+
+* this is a cut down webpage of a gif of the local weather radar from the nice people here: http://www.pa.op.dlr.de/poldirad/
+
+* i made this cuz i like looking at weather radars, and i wanted a simple small page i could leave running on an old phone plugged into a charger.
