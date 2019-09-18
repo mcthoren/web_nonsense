@@ -1,6 +1,6 @@
 leafmap.html:
 
-* this is basically a collection of the leaflet map examples strung together into a simple map. so far it has a few layers, a scale, zoom, and when you click it shows you the lat/long.
+* this is basically a collection of the leaflet map examples strung together into a simple map. so far it has a few layers, a scale, zoom, and when you click it shows you the lat/long. the nice leaflet ppl can be found here: https://leafletjs.com/
 
 * the layers are all from open and free sources.
 
