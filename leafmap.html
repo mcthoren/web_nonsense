@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Leaflet Map</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+</head>
+
+<body>
+
+<div id="mapid" style="width: 1885px; height: 1075px;"></div>
+<script>
+
+	var popup = L.popup();
+
+	var img_L = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: 'Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community' }),
+	street_L = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', { attribution: 'Sources: Esri, HERE, Garmin, USGS, Intermap, INCREMENT P, NRCan, Esri Japan, METI, Esri China (Hong Kong), Esri Korea, Esri (Thailand), NGCC, © OpenStreetMap contributors, and the GIS User Community' }),
+	wikimaps_L = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors'});
+
+	var mymap = L.map('mapid', {
+		center: [48.356791, 10.880027],
+		zoom: 15,
+		layers: img_L
+	});
+
+	var layers = {
+		"Imagery": img_L,
+		"Street Map": street_L,
+		"Wikimedia Maps": wikimaps_L
+	};
+
+function onMapClick(e) {
+	popup
+		.setLatLng(e.latlng)
+		.setContent(e.latlng.toString())
+		.openOn(mymap);
+}
+
+L.control.layers(layers).addTo(mymap);
+L.control.scale({imperial: false}).addTo(mymap);
+mymap.on('click', onMapClick);
+
+</script>
+
+</body>
+</html>
