@@ -25,3 +25,9 @@ dwd_rad_loop.html
 * this is a cut down webpage that displays weather radar gifs for both germany and bavaria. the data and gifs are from https://www.dwd.de/DE/leistungen/radarbild_film/radarbild_film.html
 
 * this was made on the idea that i could just pop it up on a raspberry pi or old phone or whatever in the background.
+
+dd.css
+
+* in an effort to make some of my pages look better on phones, i'm toying around with doing a style sheet for everything.
+
+* this will also accompany a general move to html5
