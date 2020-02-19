@@ -23,7 +23,8 @@
 
 	var img_L = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: 'Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community' }),
 	street_L = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', { attribution: 'Sources: Esri, HERE, Garmin, USGS, Intermap, INCREMENT P, NRCan, Esri Japan, METI, Esri China (Hong Kong), Esri Korea, Esri (Thailand), NGCC, © OpenStreetMap contributors, and the GIS User Community' }),
-	wikimaps_L = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors'});
+	wikimaps_L = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors'}),
+	openstreetmaps_L = L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors'});
 
 	var mymap = L.map('mapid', {
 		center: [48.356791, 10.880027],
@@ -34,7 +35,8 @@
 	var layers = {
 		"Imagery": img_L,
 		"Street Map": street_L,
-		"Wikimedia Maps": wikimaps_L
+		"Wikimedia Maps": wikimaps_L,
+		"OpenStreetMaps": openstreetmaps_L
 	};
 
 function onMapClick(e) {
