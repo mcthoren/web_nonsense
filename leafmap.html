@@ -51,7 +51,7 @@ function onMapClick(e) {
 L.control.layers(layers).addTo(mymap);
 L.control.scale({imperial: false}).addTo(mymap);
 L.control.polylineMeasure({position: 'topleft', unit: 'metres', showBearings: true, clearMeasurementsOnStop: false, showClearControl: true}).addTo(mymap);
-mymap.on('click', onMapClick);
+mymap.on('dblclick', onMapClick);
 
 </script>
 
